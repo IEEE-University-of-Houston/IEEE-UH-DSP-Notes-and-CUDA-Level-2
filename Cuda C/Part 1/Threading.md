@@ -115,16 +115,17 @@ Now lets do an example vector addition function. What is shown below is just a b
 <td>
 <pre>
 void vecAdd(float*, float*, float*, int, int);
+
 int main(){
     float* A, float* B, float* C;
     vecAdd(C, A, B, 5, 4)
 }
 
 vecAdd(float* C, float* A, float* B, int m, int n){
-    for (int i = 0; i < m; i++){     
+    for (int i = 0; i < m; i++){
         for (int j = 0; j < n; j++){
             C[i * j + j] = A[i * j + j] + B[i * j + j];
-        }   
+        }
     }
 }
 
@@ -171,6 +172,6 @@ This show that the grid consist of 2x2x1 grid that each block in that grid conta
 
 ## Assignment
 
-1. Print hello world multiple times by making a kernel, size of your choice, using a global function and navigate which block and thread where hello world is printed
+1. Print hello world multiple times by making a kernel, size of your choice, using a global function and navigate which block and thread hello world is printed
 2. Complete the vector addition program using global function and the concept from this document, navigate where the calculation occurs in which block and thread.
 3. Write a matrix multiplication program using global function and the concept from this document. Need to consider multidimensional grids.
