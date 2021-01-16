@@ -7,7 +7,7 @@ A kernel is a global function that is executed on the GPU where the function tas
 
 A thread is a task that is specified on 1 CUDA core
 
-The organization of threads and how to call global function are shown below:
+The organization of threads and how to call global function is described below:
 ```angular2
 kernelFunction: The name of your global function
 gridDim: the number of blocks per grid
@@ -21,7 +21,7 @@ kernelFunction <<< gridDim, blockDim >>>(parameters used for global function)
 
 ## Device Global Memory and Data Transfer
 The communication between host and device is shown below
-![](images/2.jpg)
+![](images/2.JPG)
 
 ### Cuda Functions
 The concepts of dynamic allocation and freeing memory is important. From the pointer tutorial, you should already know about malloc and free. There is a cuda counterpart
@@ -105,7 +105,7 @@ __global__ kernelFunction (){
 For visual representation
 ![](images/4.JPG)
 
-Now lets do an example vector addition function. What is shown below is just a brief aspect of vector Addition.
+Now lets do an example vector addition function. What is shown below is just a brief aspect of vector addition.
 <table>
 <tr>
 <th>Host</th>
@@ -168,7 +168,7 @@ kernelFunction <<<dimBlock, dimThread>>>()
 ```
 This show that the grid consist of 2x2x1 grid that each block in that grid contain 4x2x2 threads. The illustration is shown below.
 
-![](images/3.jpg)
+![](images/3.JPG)
 
 ## Assignment
 
