@@ -13,7 +13,7 @@ Data Parallelism is running the same task with different components of data on e
 
 A good example of this would be vector addition where every element in the array is added individually with respect to their index. Each calculation is utilizing one core. 
 
-![](images/1.jpg)
+![](images/1.JPG)
 
 
 ### Trade off between Task Parallelism and Data Parallelism

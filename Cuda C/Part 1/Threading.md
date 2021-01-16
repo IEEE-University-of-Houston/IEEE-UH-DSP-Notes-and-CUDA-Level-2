@@ -103,7 +103,7 @@ __global__ kernelFunction (){
 </table>
 
 For visual representation
-![](images/4.jpg)
+![](images/4.JPG)
 
 Now lets do an example vector addition function. What is shown below is just a brief aspect of vector Addition.
 <table>
@@ -166,7 +166,7 @@ kernelFunction <<<dimBlock, dimThread>>>()
 ```
 This show that the grid consist of 2x2x1 grid that each block in that grid contain 4x2x2 threads. The illustration is shown below.
 
-![](images/3.JPG)
+![](images/3.jpg)
 
 ## Assignment
 
