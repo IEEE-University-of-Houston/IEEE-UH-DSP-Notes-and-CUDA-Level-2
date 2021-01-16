@@ -20,7 +20,7 @@ kernelFunction <<< gridDim, blockDim >>>(parameters used for global function)
 
 
 ## Device Global Memory and Data Transfer
-The communication between host and device is shown below
+The communication between host and device is illustrated below
 ![](images/2.JPG)
 
 ### Cuda Functions
