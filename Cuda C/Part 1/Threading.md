@@ -70,7 +70,7 @@ You can somewhat view the kernel as an initial conditions on a double for loop, 
 <tr>
 <td>
 <pre>
-int main(){}
+int main(){
     int i = 0;
     for (int m=0; m <5; m++){
         for (int n = 0; n <4; n++){
@@ -116,6 +116,7 @@ Now lets do an example vector addition function. What is shown below is just a b
 <pre>
 void vecAdd(float*, float*, float*, int, int);
 int main(){
+    float* A, float* B, float* C;
     vecAdd(C, A, B, 5, 4)
 }
 
@@ -125,7 +126,7 @@ vecAdd(float* C, float* A, float* B, int m, int n){
             C[i * j + j] = A[i * j + j] + B[i * j + j] 
         }       
      }      
-}       
+}    
 
 </pre>
 </td>
@@ -137,7 +138,7 @@ __global__ void vecAdd(float*, float*, float*, int);
 
 int main(){
     int gridDim, blockDim, n;
-    float* 
+    float* A, float* B, float* C;
     gridDim = 5;
     blockDim = 4;
     n = gridDim*blockDim;
