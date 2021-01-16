@@ -1,14 +1,14 @@
-#Introduction to Data Paralleism and CUDA C
+# Introduction to Data Paralleism and CUDA C
         
-##Parallelism
+## Parallelism
 When talking about Parallelism, the first thing we consider is Task Paralleism.
-###Task Parallelism 
+### Task Parallelism 
 Task Parallelism is what is known as multiple processing.  What happens is that each task gets distributed towards each core on the CPU. The cores will set priority for those individual task.      
 
 An example would be: doing homework while eating and AFK grinding on a video game. Each task isn't really done at the same time, some may be done at different times and have different priorities. 
 
 For this worrkshop, we are focusing more on Data Parallelism.
-###Data Parallelism
+### Data Parallelism
 Data Parallelism is running the same task with different components of data on each core.       
 
 A good example of this would be vector addition where every element in the array is added individually with respect to their index. Each calculation is utilizing one core. 
@@ -16,7 +16,7 @@ A good example of this would be vector addition where every element in the array
 ![](images/1.jpg)
 
 
-###Trade off between Task Parallelism and Data Parallelism
+### Trade off between Task Parallelism and Data Parallelism
 The trade off between task and data parallelism would be dependent on the operat ion and the amount of data required for the operation 
 #### CPU
 1. The cores on the CPU is are faster and smarter than the GPU.
@@ -30,7 +30,7 @@ The trade off between task and data parallelism would be dependent on the operat
 
 
 
-###Function Declaration
+### Function Declaration
 There are 3 types of function declaration that is specified by nvcc     
 ``
 __host__: called and executed on the host(cpu)                  
@@ -39,7 +39,7 @@ __global__: called on the host and executes on the device
 ``     
 
 
-####__host__ functions
+#### __host__ functions
 Host function are the common functions that we write in general. 
 ```angular2
 int add(int x, int y){
@@ -57,7 +57,7 @@ Host functions are functions that are
 ```
 
 
-####__device__ functions
+#### __device__ functions
 Device function are function that are
 1. compiled by nvcc 
 2. Once called, the only way out is to return
@@ -68,7 +68,7 @@ __device__ int add(int x, int y){
     return x + y;
 }
 ```
-####__global__ functions
+#### __global__ functions
 Global function are functions that are
 1. device functions that are executed from host
 2. they are void type functions
@@ -94,4 +94,3 @@ __global__ void MatrixMulKernel(float* d_M, float* d_N, float* d_P, int Width) {
 ```
 Global functions and kernels will be thoroughly explained in the next section, Threading
 
-##Conclusion
