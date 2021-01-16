@@ -32,11 +32,11 @@ The trade off between task and data parallelism would be dependent on the operat
 
 ### Function Declaration
 There are 3 types of function declaration that is specified by nvcc     
-``
+```angular2
 __host__: called and executed on the host(cpu)                  
 __device__: called and executed on a device(gpu)                    
-__global__: called on the host and executes on the device           
-``     
+__global__: called on the host and executes on the device   
+```     
 
 
 #### __host__ functions
