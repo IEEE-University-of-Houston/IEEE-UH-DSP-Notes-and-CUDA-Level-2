@@ -21,7 +21,7 @@ kernelFunction <<< gridDim, blockDim >>>(parameters used for global function)
 
 ## Device Global Memory and Data Transfer
 The communication between host and device is shown below
-![](images/2.jpg)
+![](images/2.JPG)
 
 ### Cuda Functions
 The concepts of dynamic allocation and freeing memory is important. From the pointer tutorial, you should already know about malloc and free. There is a cuda counterpart
@@ -123,11 +123,11 @@ int main(){
 
 vecAdd(float* C, float* A, float* B, int m, int n){
     for (int i = 0; i < m; i++){
-        for (int j = 0; j < n; j++){
+        for (int j = 0; j < n; j++){    
             C[i * j + j] = A[i * j + j] + B[i * j + j];
-        }
-    }
-}
+        }   
+    }   
+}   
 
 </pre>
 </td>
@@ -168,7 +168,7 @@ kernelFunction <<<dimBlock, dimThread>>>()
 ```
 This show that the grid consist of 2x2x1 grid that each block in that grid contain 4x2x2 threads. The illustration is shown below.
 
-![](images/3.jpg)
+![](images/3.JPG)
 
 ## Assignment
 
