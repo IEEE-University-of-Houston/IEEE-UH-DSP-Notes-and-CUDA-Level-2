@@ -120,12 +120,12 @@ int main(){
 }
 
 vecAdd(float* C, float* A, float* B, int m, int n){
-    for (int i = 0; i < m; i++){
-        for (int j = 0; j < n; j++){
-            C[i*j + j] = A[i*j + j] + B[i*j + j] 
-        }
-     }
-}
+    for (int i = 0; i < m; i++){        
+        for (int j = 0; j < n; j++){        
+            C[i * j + j] = A[i * j + j] + B[i * j + j] 
+        }       
+     }      
+}       
 
 </pre>
 </td>
